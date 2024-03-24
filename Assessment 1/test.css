@@ -1,0 +1,192 @@
+body {
+    background-color: #ADD8E6; /* Light blue background */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #83868b; /* Blue header */
+    color: #0e0c0c; /* White text */
+}
+
+#headerImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#headerText {
+    font-size: 24px;
+}
+
+.chatheader {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #0000FF; /* Blue header */
+    color: #FFFFFF; /* White text */
+}
+
+#chatheaderImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#chatheaderText {
+    font-size: 24px;
+}
+
+#chatbox {
+    width: 100%;
+    height: 80vh;
+    background-color: #FFFFFF; /* White chatbox */
+    border-radius: 5px;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#chatbox div {
+    margin-bottom: 10px;
+}
+
+/*Input Area */
+.inputArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF; /* White input area */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#userInput {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent; /* Transparent input box */
+}
+
+#sendBtn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #0000FF; /* Blue send button */
+}
+
+/*Chat Bubble*/
+.message {
+    max-width: 60%;
+    margin-bottom: 20px;
+}
+
+.userName, .botName {
+    font-weight: bold;
+}
+
+.text {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.bubble {
+    border-radius: 20px;
+}
+
+.userMessage {
+    align-self: flex-end;
+    text-align: right;
+}
+.userMessage .bubble {
+    margin-left: auto;
+    background-color: #0084FF; /* Blue user message */
+    color: #FFFFFF; /* White text */
+}
+
+.botMessage {
+    margin-right: auto;
+    align-self: flex-start;
+}
+
+.botMessage .bubble {
+    margin-right: auto;
+    background-color: #F1F0F0; /* Light gray bot message */
+    color: #000000; /* Black text */
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #888888; /* Gray text */
+    margin-top: 10px;
+}
+
+.userMessage .timestamp {
+    align-self: flex-end;
+}
+
+.botMessage .timestamp {
+    align-self: flex-start;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    #chatbox {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .message {
+        max-width: 80%;
+    }
+
+    #userInput {
+        width: 70%;
+    }
+
+    #sendBtn {
+        width: 28%;
+    }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 601px) {
+    #chatbox {
+        width: 100%;
+        height: 80vh;
+        background-color: #FFFFFF; /* White chatbox */
+        border-radius: 5px;
+        padding: 20px;
+        overflow-y: auto; /* Enable scrolling */
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .message {
+        max-width: 60%;
+        margin-bottom: 20px;
+    }
+
+    #userInput {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+
+    #sendBtn {
+        width: 18%;
+        margin-left: 2%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        color: #FFFFFF;
+        background-color: #0000FF; /* Blue send button */
+    }
+}
